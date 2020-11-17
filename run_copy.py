@@ -7,16 +7,6 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-
-@app.route("/about")
-def about():
-    return render_template("about.html")
-
-
-@app.route("/contact")
-def contact():
-    return render_template("contact.html")
-
 if __name__ == "__main__": #references built-in variable
     app.run( #if statement above is true we run the app with the following arguments
         host = os.environ.get("IP", "0.0.0.0"), #using os module from standard library to get the 'IP' environment variable if it exists but return a default value if it isn't found
